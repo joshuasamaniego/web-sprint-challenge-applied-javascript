@@ -13,15 +13,15 @@ const topicsContainer = document.querySelector('.topics');
 axios
     .get('https://lambda-times-api.herokuapp.com/topics')
     .then((res) => {
-        console.log(res);
+        // console.log(res);
         const topics = res.data.topics;
         topics.forEach((tab) => {
             const tabName = tab;
-            console.log(tabName);
+            // console.log(tabName);
             const newTab = document.createElement('div');
             newTab.classList.add('tab');
             topicsContainer.appendChild(newTab);
-            console.log(topicsContainer);
+            // console.log(topicsContainer);
             newTab.textContent = tabName;
         })
     })
